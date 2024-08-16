@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox alignment="CENTER" spacing="15" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AirportController">
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Airport Flight Entry System" />
+    <TextField fx:id="flightNumberInput" prefWidth="200" promptText="Enter Flight Number" />
+    <Button onAction="#handleLandFlight" prefWidth="150" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Land Flight" />
+    <Button onAction="#handleDepartFlight" prefWidth="150" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Depart Flight" />
+    <Label fx:id="statusLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Landed Flights:" />
+    <ListView fx:id="landedFlightsListView" prefHeight="150" prefWidth="250" />
+    <Pane fx:id="animationPane" prefHeight="321.0" prefWidth="800" style="-fx-background-color: green;">
+    <Pane id="waitingPane" style="-fx-background-color: #FFFFFF;" />
+    
+        <children>
+            <!-- Define the rectangles for the hangar slots -->
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#49586ea6" height="121.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="551.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfeff" height="10.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="551.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d6ff00" height="10.0" layoutX="14.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="551.0" />
+            <Pane fx:id="waitingPane" layoutY="181.0" prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: voilet;">
+                <!-- This pane is for displaying waiting planes -->
+            </Pane>
+            <Label layoutX="587.0" layoutY="81.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Hangar Capacity is 5" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfeff" height="10.0" layoutX="14.0" layoutY="125.0" stroke="BLACK" strokeType="INSIDE" width="551.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7f709" height="10.0" layoutX="14.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="551.0" />
+        </children>
+    </Pane>
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Waiting Flights:" />
+    <VBox.margin>
+        <Insets bottom="20" top="20" />
+    </VBox.margin>
+</VBox>

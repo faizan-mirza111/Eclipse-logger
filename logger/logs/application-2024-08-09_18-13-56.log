@@ -1,0 +1,2 @@
+2024-08-09 18:13:56 [JavaFX Application Thread] INFO  application.AirportController - Animating departure for plane with ID null
+2024-08-09 18:13:56 [JavaFX Application Thread] INFO  application.AirportController - Flight sdd departed successfully.

@@ -1,0 +1,2 @@
+2024-08-10 17:56:23 [JavaFX Application Thread] INFO  application.AirportController - Animating landing for flight 1
+2024-08-10 17:56:23 [JavaFX Application Thread] INFO  application.AirportController - Flight 1 landed successfully.
